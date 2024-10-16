@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 //         stage('Sonar-Report') {
@@ -18,7 +18,7 @@ pipeline {
 //         }
         stage('Test') { 
             steps {
-                bat 'mvn test' 
+                sh 'mvn test' 
             }
             post {
                 always {
