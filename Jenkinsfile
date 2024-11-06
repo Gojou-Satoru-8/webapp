@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Sonar-Report') {
             steps {
-                sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:8090 -Dsonar.analysis.mode=publish'
+                sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
             }
         }
     }
