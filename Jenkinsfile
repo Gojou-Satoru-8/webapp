@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Sonar-Report') {
             steps {
-                sh 'mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Gojou-Satoru-8_webapp'
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Gojou-Satoru-8_webapp'
             }
         }
     }
